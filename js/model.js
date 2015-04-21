@@ -1,0 +1,1 @@
+var BoxSettings = Backbone.Model.extend({});
