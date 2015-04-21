@@ -1,6 +1,6 @@
 var templates = [];
 $(function() {
-    templates["home"] = getTemplateAjax("template/home.js");
+    templates["home"] = getTemplateAjax("template/home.hbr");
     console.log(1);
     var appRouter = new GardenRouter;
     Backbone.history.start();    
