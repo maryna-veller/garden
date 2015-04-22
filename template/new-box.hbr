@@ -1,0 +1,28 @@
+<div id="backButton">
+    <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"></a>
+</div>
+<div data-role="header" >
+    <h2 class="ui-title">My Garden</h2>
+</div>  
+<div data-role="main" class="ui-content">
+    <form>
+        <div class="ui-field-contain" >
+            <div data-role="fieldcontain"> 
+                <label for="name">Box name:</label>
+                <input type="text" name="name" id="name" value="{{input_name}}">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="length">Box Length:</label>
+                <input type="number" data-clear-btn="false" name="length" id="length" value="{{input_length}}">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="width">Box Width:</label>
+                <input type="number" data-clear-btn="false" name="width" id="width" value="{{input_width}}">
+            </div>
+        </div>
+    </form>
+    <form method="post" action="demoform.asp">
+
+</form>
+{{box}}
+</div>

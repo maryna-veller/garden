@@ -6,14 +6,12 @@ var HomeView = GardenView.extend({
         "click #createBox":"createBox"
     },
     render: function(){
-        var context = {};//{title: "My New Post", body: "This is my first post!"};
+        var context = {};
         var html    = templates["home"](context);        
-//                alert(html);        
-
-        this.$el.html(html);
+        this.$el.html(html).enhanceWithin();
         return this;
     },
     createBox: function(){
-        alert("add");
+        appRouter.navigate("newBox", true);
     }
 });

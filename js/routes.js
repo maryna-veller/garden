@@ -1,14 +1,13 @@
 var GardenRouter = Backbone.Router.extend({
     routes: {
-        "addBox": "addBox",
+        "newBox": "newBox",
         "*home": "defaultRoute"
     },
-    addBox: function(){
-        alert("add");
+    newBox: function(){
+        var newBox = new BoxModel();
+        var newBoxView = new NewBoxView({el: $('#garden'), model: newBox});
     },
     defaultRoute: function(){
         var homeView = new HomeView({el: $('#garden')});
-       // homeView.render();
-        console.log(2);
     }
 });

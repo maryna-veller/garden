@@ -1,17 +1,15 @@
 var templates = [];
+var appRouter;
 $(function() {
     templates["home"] = getTemplateAjax("template/home.hbr");
-    console.log(1);
-    var appRouter = new GardenRouter;
+    templates["new-box"] = getTemplateAjax("template/new-box.hbr");
+    appRouter = new GardenRouter;
     Backbone.history.start();    
-    
-    console.log(4);
 });
 
 function getTemplateAjax(path) {
         var source;
         var template;
-      //  alert(path);
         $.ajax({
             url: path, 
             cache: true,
