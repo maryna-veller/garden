@@ -1,1 +1,1 @@
-/*var GardenView = Backbone.View.extend({});*/
+var GardenView = Backbone.View.extend({});

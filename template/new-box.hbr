@@ -20,9 +20,8 @@
                 <input type="number" data-clear-btn="false" name="width" id="width" value="{{input_width}}">
             </div>
         </div>
+        <button type="submit" id="submitNewBox">Create Box</button>
     </form>
-    <form method="post" action="demoform.asp">
-
-</form>
+    
 {{box}}
 </div>
