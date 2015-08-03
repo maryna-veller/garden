@@ -3,7 +3,8 @@ var HomeView = GardenView.extend({
         this.render();    
     },
     events:{
-        "click #createBox":"createBox"
+        "click #createBox":"createBox",
+        "click #selectBox":"selectBox"
     },
     render: function(){
         var context = {};
@@ -13,5 +14,8 @@ var HomeView = GardenView.extend({
     },
     createBox: function(){
         appRouter.navigate("newBox", true);
+    },
+    selectBox: function(){
+        appRouter.navigate("selectBox", true);
     }
 });

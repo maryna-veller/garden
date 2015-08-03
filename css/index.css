@@ -27,3 +27,7 @@ ul li a{
 input[type="number"], input[type="text"]{
     margin: 2px !important;
 }
+.cell{
+    width: 60px;
+    length: 60px;
+}

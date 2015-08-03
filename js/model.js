@@ -5,3 +5,11 @@ var BoxModel = Backbone.Model.extend({
         name: "My Box"
     }
 }); 
+
+var CellModel = Backbone.Model.extend({
+    defaults:{
+        plant: "",
+        date: "",
+        note: ""
+    }
+});

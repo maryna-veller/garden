@@ -1,0 +1,28 @@
+<div id="backButton">
+    <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back" id="cellBackButton"></a>
+</div>
+<div data-role="header" >
+    <h2 class="ui-title">My Garden</h2>
+</div>  
+<div data-role="main" class="ui-content">
+    <form>
+        <input type="hidden" name="i" id="i" value="{{i}}">
+        <input type="hidden" name="j" id="j" value="{{j}}">
+        <div class="ui-field-contain" >
+            <div data-role="fieldcontain"> 
+                <label for="plant">Plant name:</label>
+                <input type="text" name="plant" id="plant" value="{{plant}}">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="date">Date of planting:</label>
+                <input type="date" data-clear-btn="false" name="date" id="date" value="{{date}}">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="note">Note:</label>
+                <input type="text" data-clear-btn="false" name="note" id="note" value="{{note}}">
+            </div>
+        </div>
+        <button type="submit" id="saveCell">Save</button>
+    </form>
+    
+</div>

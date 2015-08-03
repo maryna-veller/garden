@@ -1,0 +1,9 @@
+<div id="backButton">
+    <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"></a>
+</div>
+<div data-role="header" >
+    <h2 class="ui-title">My Garden</h2>
+</div>
+<table>
+{{#list boxes}}{{/list}}
+</table>
