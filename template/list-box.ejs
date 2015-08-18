@@ -5,5 +5,7 @@
     <h2 class="ui-title">My Garden</h2>
 </div>
 <table>
-{{#list boxes}}{{/list}}
+    <% for (var i =0; i<boxes.models.length;i++){ %>
+        <div><a href="#" class="boxLink" id='<%=boxes.models[i].get("id")%>'><%=boxes.models[i].get("name")%></a></div>
+    <% } %>
 </table>

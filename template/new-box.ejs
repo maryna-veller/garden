@@ -9,19 +9,18 @@
         <div class="ui-field-contain" >
             <div data-role="fieldcontain"> 
                 <label for="name">Box name:</label>
-                <input type="text" name="name" id="name" value="{{input_name}}">
+                <input type="text" name="name" id="name" value="<%=input_name%>">
             </div>
             <div data-role="fieldcontain">
                 <label for="length">Box Length:</label>
-                <input type="number" data-clear-btn="false" name="length" id="length" value="{{input_length}}">
+                <input type="number" data-clear-btn="false" name="length" id="length" value="<%=input_length%>">
             </div>
             <div data-role="fieldcontain">
                 <label for="width">Box Width:</label>
-                <input type="number" data-clear-btn="false" name="width" id="width" value="{{input_width}}">
+                <input type="number" data-clear-btn="false" name="width" id="width" value="<%=input_width%>">
             </div>
         </div>
         <button type="submit" id="submitNewBox">Create Box</button>
     </form>
     
-{{box}}
 </div>

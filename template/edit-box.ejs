@@ -1,0 +1,17 @@
+<div id="backButton">
+    <a href="#selectBox" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"></a>
+</div>
+<div data-role="header" >
+    <h2 class="ui-title">My Garden</h2>
+</div>
+<table data-role="table" class="ui-responsive">
+    <% for (var i =0; i<box.length; i++){%>
+    <% var col = box[i];%>
+    <tr>
+        <% for (var j=0; j<col.length; j++){%>
+            <% var cell = col[j];%>
+        <td><div class ='cell' id = 'cell<%=i%>_<%=j%>'>Plant: <%=cell.plant%><br/>Date: <%=cell.date%> <br/>Note: <%=cell.note%></div></td>
+        <% } %>
+    </tr>
+    <% } %>
+</table>

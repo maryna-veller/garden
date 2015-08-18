@@ -8,7 +8,7 @@ var HomeView = GardenView.extend({
     },
     render: function(){
         var context = {};
-        var html    = templates["home"](context);        
+        var html    = templates["home"].render(context);        
         this.$el.html(html).enhanceWithin();
         return this;
     },

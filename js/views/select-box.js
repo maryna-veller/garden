@@ -14,7 +14,7 @@ var SelectBoxView = GardenView.extend({
        });
         
         var context = {boxes:boxes};
-        var html    = templates["list-box"](context);  
+        var html    = templates["list-box"].render(context);  
         this.$el.html(html).enhanceWithin();
 
     

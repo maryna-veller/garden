@@ -1,15 +1,24 @@
+define([jquery
+], function($){
 var templates = [];
 var appRouter;
-$(function() {
-    templates["home"] = getTemplateAjax("template/home.hbr");
-    templates["new-box"] = getTemplateAjax("template/new-box.hbr");
-    templates["edit-box"] = getTemplateAjax("template/edit-box.hbr");
-    templates["list-box"] = getTemplateAjax("template/list-box.hbr");
-    templates["edit-cell"] = getTemplateAjax("template/edit-cell.hbr");
-    appRouter = new GardenRouter;
-    Backbone.history.start();    
+    $(function() {
+        templates["home"] = getEjsTeamplate("template/home.ejs");
+        templates["new-box"] = getEjsTeamplate("template/new-box.ejs");
+        templates["edit-box"] = getEjsTeamplate("template/edit-box.ejs");
+        templates["list-box"] = getEjsTeamplate("template/list-box.ejs");
+        templates["edit-cell"] = getEjsTeamplate("template/edit-cell.ejs");
+        appRouter = new GardenRouter;
+        Backbone.history.start();    
+    });
+
+    function getEjsTeamplate(path){
+        return new EJS({url: path});
+
+    }
 });
 
+/*
 function getTemplateAjax(path) {
         var source;
         var template;
@@ -54,3 +63,4 @@ Handlebars.registerHelper('list', function(dataObject, options) {
     }
     return out;
 });
+*/
