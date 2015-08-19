@@ -3,7 +3,6 @@ require.config({
         extension: '.ejs'
     },
     paths: {
-        cardova: 'cardova',
         underscore: 'js/libs/underscore-min',
         jquery: 'js/libs/jquery-2.1.4',
         jquerymobile: 'js/libs/jquery.mobile-1.4.5',
