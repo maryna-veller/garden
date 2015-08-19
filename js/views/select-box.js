@@ -1,25 +1,36 @@
-var SelectBoxView = GardenView.extend({
-    initialize: function(){
-        this.render();
-    },
-    events:{
-        "click a.boxLink" : "selectBox"
-    },
-    render:function(){
-        
-        boxes.fetch();
-        var listOfBoxes = "";
-        boxes.each(function(box){
-            listOfBoxes += boxes.get(box.id).get("name");           
-       });
-        
-        var context = {boxes:boxes};
-        var html    = templates["list-box"].render(context);  
-        this.$el.html(html).enhanceWithin();
+define([
+    'jquery',
+    'jquerymobile',
+    'underscore',
+    'backbone',
+    'js/view',
+    'js/collection',
+    'tpl!template/list-box'
+], function($, Mobile, _,Backbone, view, collection,ListBoxTemplate){
+    var SelectBoxView = view.extend({
+        initialize: function(){
+            this.render();
+        },
+        events:{
+            "click a.boxLink" : "selectBox"
+        },
+        render:function(){
 
-    
-    }, 
-    selectBox:function(e){
-        appRouter.navigate("editBox/"+e.target.id, true);
-    }
+            collection.fetch();
+            var listOfBoxes = "";
+            collection.each(function(box){
+                listOfBoxes += collection.get(box.id).get("name");           
+           });
+
+            var context = {boxes:collection};
+            var html    = ListBoxTemplate(context);  
+            this.$el.html(html).enhanceWithin();
+
+
+        }, 
+        selectBox:function(e){
+            appRouter.navigate("editBox/"+e.target.id, true);
+        }
+    });
+    return SelectBoxView;
 });

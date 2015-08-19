@@ -1,21 +1,30 @@
-define([jquery
-], function($){
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+    'ejs',
+    'js/routes'
+], function($, _, Backbone, ejs, routes){
 var templates = [];
 var appRouter;
-    $(function() {
-        templates["home"] = getEjsTeamplate("template/home.ejs");
-        templates["new-box"] = getEjsTeamplate("template/new-box.ejs");
-        templates["edit-box"] = getEjsTeamplate("template/edit-box.ejs");
-        templates["list-box"] = getEjsTeamplate("template/list-box.ejs");
-        templates["edit-cell"] = getEjsTeamplate("template/edit-cell.ejs");
-        appRouter = new GardenRouter;
+    var initialize = function() {
+    //    templates["home"] = getEjsTeamplate("template/home.ejs");
+    //    templates["new-box"] = getEjsTeamplate("template/new-box.ejs");
+    //    templates["edit-box"] = getEjsTeamplate("template/edit-box.ejs");
+    //    templates["list-box"] = getEjsTeamplate("template/list-box.ejs");
+    //    templates["edit-cell"] = getEjsTeamplate("template/edit-cell.ejs");
+        routes.initialize();
         Backbone.history.start();    
-    });
+    };//
 
-    function getEjsTeamplate(path){
-        return new EJS({url: path});
+    //function getEjsTeamplate(path){
+      //  return new ejs({url: path});
 
-    }
+    //}
+    
+    return {
+        initialize: initialize
+    };
 });
 
 /*

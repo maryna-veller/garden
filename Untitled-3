@@ -1,0 +1,14 @@
+        <script type="text/javascript" src="js/model.js"></script>
+        <script type="text/javascript" src="js/collection.js"></script>
+        <script type="text/javascript" src="js/view.js"></script>
+        <script type="text/javascript" src="js/routes.js"></script>
+        
+        <!--views-->
+        <script type="text/javascript" src="js/views/garden-view.js"></script>
+        <script type="text/javascript" src="js/views/home.js"></script>
+        <script type="text/javascript" src="js/views/new-box.js"></script>
+        <script type="text/javascript" src="js/views/edit-box.js"></script>
+        <script type="text/javascript" src="js/views/select-box.js"></script>
+        <script type="text/javascript" src="js/views/edit-cell.js"></script>
+
+        <script type="text/javascript" src="js/init.js"></script>
